@@ -1,0 +1,422 @@
+/**
+ * PAGES.CSS
+ * Page-specific styles and overrides
+ * Dr. M. R. Ravi, IAS Portfolio
+ */
+
+/* ========================================
+   HOME PAGE
+   ======================================== */
+
+.home-hero {
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-background) 100%);
+}
+
+.home-intro {
+    padding: var(--space-3xl) 0;
+}
+
+.home-highlights {
+    padding: var(--space-3xl) 0;
+    background-color: var(--color-background-alt);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-2xl);
+    align-items: start;
+}
+
+.about-sidebar {
+    position: sticky;
+    top: calc(65px + var(--space-lg));
+}
+
+.about-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+}
+
+.about-quick-facts {
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+}
+
+.about-quick-facts h4 {
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.quick-fact {
+    margin-bottom: var(--space-md);
+}
+
+.quick-fact:last-child {
+    margin-bottom: 0;
+}
+
+.quick-fact-label {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.quick-fact-value {
+    font-weight: var(--font-weight-medium);
+}
+
+.about-main h2 {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.about-main h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+@media (max-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: var(--space-lg);
+        align-items: start;
+    }
+
+    .about-image {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        max-width: 150px;
+        margin: 0 auto var(--space-lg);
+    }
+}
+
+/* ========================================
+   JOURNEY PAGE
+   ======================================== */
+
+.journey-intro {
+    max-width: 800px;
+    margin-bottom: var(--space-2xl);
+}
+
+.journey-timeline {
+    max-width: 900px;
+}
+
+/* ========================================
+   IMPACT PAGE
+   ======================================== */
+
+.impact-intro {
+    max-width: 800px;
+    margin-bottom: var(--space-2xl);
+}
+
+.impact-areas {
+    margin-bottom: var(--space-3xl);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.initiatives-section h2 {
+    margin-bottom: var(--space-xl);
+}
+
+.initiative-card {
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.initiative-card:last-child {
+    margin-bottom: 0;
+}
+
+.initiative-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.initiative-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+}
+
+.initiative-tag {
+    font-size: var(--font-size-small);
+    padding: var(--space-xs) var(--space-sm);
+    background-color: rgba(31, 58, 95, 0.1);
+    color: var(--color-accent-primary);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+}
+
+.initiative-outcome {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background-color: var(--color-background);
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-md);
+}
+
+.initiative-outcome-icon {
+    color: var(--color-accent-secondary);
+    flex-shrink: 0;
+}
+
+/* ========================================
+   BOOKS PAGE
+   ======================================== */
+
+.books-intro {
+    max-width: 800px;
+    margin-bottom: var(--space-2xl);
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.writing-themes {
+    background-color: var(--color-background-alt);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.writing-themes h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.themes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.theme-tag {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-small);
+}
+
+/* ========================================
+   AWARDS PAGE
+   ======================================== */
+
+.awards-intro {
+    max-width: 800px;
+    margin-bottom: var(--space-2xl);
+}
+
+.awards-list {
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+/* ========================================
+   GALLERY PAGE
+   ======================================== */
+
+.gallery-intro {
+    max-width: 800px;
+    margin-bottom: var(--space-xl);
+}
+
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.gallery-filter {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.gallery-filter:hover,
+.gallery-filter.active {
+    background-color: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    color: white;
+}
+
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-2xl);
+}
+
+.contact-details {
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.contact-details h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.contact-form-section h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.contact-form {
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+
+.skeleton {
+    background: linear-gradient(90deg,
+            var(--color-border) 25%,
+            var(--color-border-light) 50%,
+            var(--color-border) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: var(--radius-sm);
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ========================================
+   LAZY LOADING IMAGES
+   ======================================== */
+
+img[loading="lazy"] {
+    background-color: var(--color-border-light);
+}
+
+img.loaded {
+    animation: fadeIn var(--transition-slow);
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+
+    .site-header,
+    .site-footer,
+    .nav-toggle,
+    .lang-toggle,
+    .btn,
+    .lightbox {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    .section {
+        padding: 1rem 0;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+}

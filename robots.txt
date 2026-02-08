@@ -1,0 +1,11 @@
+# robots.txt for Dr. M. R. Ravi, IAS Portfolio Website
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.mrravi.in/sitemap.xml
+
+# Disallow access to asset folders (optional, for cleaner crawling)
+Disallow: /assets/fonts/
+Disallow: /assets/docs/
