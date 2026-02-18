@@ -429,14 +429,14 @@
         gap: var(--space-md);
     }
 
-    /* Smaller button padding */
+    /* Smaller button padding on mobile */
     .btn {
-        padding: var(--space-xs) var(--space-md);
+        padding: var(--btn-padding-y-sm) var(--btn-padding-x);
         font-size: var(--font-size-small);
     }
 
     .btn-lg {
-        padding: var(--space-sm) var(--space-lg);
+        padding: var(--btn-padding-y) var(--btn-padding-x-lg);
         font-size: var(--font-size-body);
     }
 }

@@ -93,6 +93,8 @@ button {
     --color-accent-gold: #D4A853;
     --color-accent-gold-light: #E8C373;
     --color-accent-gold-dark: #B8923D;
+    --color-accent-secondary: #D4A853;
+    /* alias — gold, fixes missing token referenced in base.css */
     --color-border: #E2E8F0;
     --color-border-light: #EDF2F7;
     --color-border-gold: rgba(212, 168, 83, 0.3);
@@ -189,6 +191,25 @@ button {
     --z-fixed: 300;
     --z-modal-backdrop: 400;
     --z-modal: 500;
+
+    /* ── Button Design Tokens ── */
+    --btn-radius: var(--radius-full);
+    /* pill shape — modern standard */
+    --btn-padding-y: 0.75rem;
+    --btn-padding-x: 1.75rem;
+    --btn-padding-y-lg: 1rem;
+    --btn-padding-x-lg: 2.5rem;
+    --btn-padding-y-sm: 0.4375rem;
+    --btn-padding-x-sm: 1.125rem;
+    --btn-font-size: 0.9375rem;
+    /* 15px */
+    --btn-letter-spacing: 0.02em;
+    --btn-font-weight: 600;
+    --btn-transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+    --btn-shadow-primary: 0 4px 14px rgba(212, 168, 83, 0.35);
+    --btn-shadow-primary-hover: 0 8px 24px rgba(212, 168, 83, 0.5);
+    --btn-shadow-secondary: 0 4px 14px rgba(26, 54, 93, 0.2);
+    --btn-shadow-secondary-hover: 0 8px 24px rgba(26, 54, 93, 0.3);
 }
 
 /* ========================================
@@ -480,77 +501,190 @@ small,
 }
 
 /* Staggered animation delays */
-.delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; transition-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
-.delay-600 { animation-delay: 0.6s; transition-delay: 0.6s; }
-.delay-700 { animation-delay: 0.7s; transition-delay: 0.7s; }
-.delay-800 { animation-delay: 0.8s; transition-delay: 0.8s; }
+.delay-100 {
+    animation-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.delay-700 {
+    animation-delay: 0.7s;
+    transition-delay: 0.7s;
+}
+
+.delay-800 {
+    animation-delay: 0.8s;
+    transition-delay: 0.8s;
+}
 
 /* ========================================
    PREMIUM ANIMATION KEYFRAMES
    ======================================== */
 
 @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.9; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(212, 168, 83, 0.5); }
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(212, 168, 83, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(212, 168, 83, 0.5);
+    }
 }
 
 @keyframes slideInUp {
-    from { opacity: 0; transform: translateY(60px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-60px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(60px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes rotateIn {
-    from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
-    to { opacity: 1; transform: rotate(0) scale(1); }
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
 }
 
 @keyframes countUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes borderGlow {
-    0%, 100% { border-color: rgba(212, 168, 83, 0.3); }
-    50% { border-color: rgba(212, 168, 83, 0.8); }
+
+    0%,
+    100% {
+        border-color: rgba(212, 168, 83, 0.3);
+    }
+
+    50% {
+        border-color: rgba(212, 168, 83, 0.8);
+    }
 }
 
 @keyframes textReveal {
-    from { clip-path: inset(0 100% 0 0); }
-    to { clip-path: inset(0 0 0 0); }
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 /* ========================================
@@ -575,8 +709,8 @@ small,
 .reveal-left {
     opacity: 0;
     transform: translateX(-50px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-left.revealed {
@@ -588,8 +722,8 @@ small,
 .reveal-right {
     opacity: 0;
     transform: translateX(50px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-right.revealed {
@@ -601,8 +735,8 @@ small,
 .reveal-scale {
     opacity: 0;
     transform: scale(0.85);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-scale.revealed {
@@ -638,7 +772,7 @@ small,
 
 .hover-lift {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-                box-shadow 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
@@ -683,6 +817,7 @@ small,
 
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
+
     .reveal,
     .reveal-left,
     .reveal-right,
