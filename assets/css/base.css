@@ -480,24 +480,77 @@ small,
 }
 
 /* Staggered animation delays */
-.delay-100 {
-    animation-delay: 0.1s;
+.delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; transition-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; transition-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; transition-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; transition-delay: 0.8s; }
+
+/* ========================================
+   PREMIUM ANIMATION KEYFRAMES
+   ======================================== */
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
 }
 
-.delay-200 {
-    animation-delay: 0.2s;
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
 }
 
-.delay-300 {
-    animation-delay: 0.3s;
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
-.delay-400 {
-    animation-delay: 0.4s;
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(212, 168, 83, 0.5); }
 }
 
-.delay-500 {
-    animation-delay: 0.5s;
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rotateIn {
+    from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
+    to { opacity: 1; transform: rotate(0) scale(1); }
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes borderGlow {
+    0%, 100% { border-color: rgba(212, 168, 83, 0.3); }
+    50% { border-color: rgba(212, 168, 83, 0.8); }
+}
+
+@keyframes textReveal {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
 }
 
 /* ========================================
@@ -507,9 +560,9 @@ small,
 /* Initial hidden state */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Revealed state */
@@ -521,8 +574,9 @@ small,
 /* Slide from left variant */
 .reveal-left {
     opacity: 0;
-    transform: translateX(-40px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateX(-50px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-left.revealed {
@@ -533,8 +587,9 @@ small,
 /* Slide from right variant */
 .reveal-right {
     opacity: 0;
-    transform: translateX(40px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateX(50px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-right.revealed {
@@ -545,8 +600,9 @@ small,
 /* Scale up variant */
 .reveal-scale {
     opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: scale(0.85);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-scale.revealed {
@@ -554,15 +610,89 @@ small,
     transform: scale(1);
 }
 
+/* Fade only variant */
+.reveal-fade {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.reveal-fade.revealed {
+    opacity: 1;
+}
+
+/* ========================================
+   COUNTER ANIMATION SUPPORT
+   ======================================== */
+
+.counter {
+    display: inline-block;
+}
+
+.counter.counting {
+    animation: countUp 0.5s ease-out forwards;
+}
+
+/* ========================================
+   HOVER MICRO-INTERACTIONS
+   ======================================== */
+
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(212, 168, 83, 0.4);
+}
+
+.hover-scale {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Gold border animation on hover */
+.hover-gold-border {
+    position: relative;
+}
+
+.hover-gold-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gradient-gold);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-gold-border:hover::after {
+    width: 100%;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-
     .reveal,
     .reveal-left,
     .reveal-right,
-    .reveal-scale {
+    .reveal-scale,
+    .reveal-fade,
+    .hover-lift,
+    .hover-scale {
         opacity: 1;
         transform: none;
         transition: none;
+        animation: none;
     }
 }

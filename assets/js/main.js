@@ -198,7 +198,12 @@
 
     function initScrollReveal() {
         // Elements to animate on scroll
-        const revealElements = document.querySelectorAll('.card, .impact-card, .book-card, .section-header, .timeline-item, .gallery-item, .about-content, .hero-stat, .award-card, [data-reveal]');
+        const revealElements = document.querySelectorAll(
+            '.card, .impact-card, .book-card, .section-header, .timeline-item, ' +
+            '.gallery-item, .about-content, .hero-stat, .award-card, .feature-card, ' +
+            '.stat-item, .about-preview, .quote-section, .cta-banner, ' +
+            '[data-reveal], .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade'
+        );
 
         if (!('IntersectionObserver' in window)) {
             // Fallback for older browsers
@@ -221,16 +226,28 @@
             });
         }, {
             root: null,
-            rootMargin: '0px 0px -80px 0px',
-            threshold: 0.1
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.15
         });
 
         revealElements.forEach(function (el, index) {
-            el.classList.add('reveal');
-            // Stagger animation for grid items
-            if (el.closest('.grid, .books-grid, .gallery-grid, .hero-stats')) {
-                el.dataset.revealDelay = (index % 4) * 100;
+            // Add base reveal class if not already present
+            if (!el.classList.contains('reveal') &&
+                !el.classList.contains('reveal-left') &&
+                !el.classList.contains('reveal-right') &&
+                !el.classList.contains('reveal-scale') &&
+                !el.classList.contains('reveal-fade')) {
+                el.classList.add('reveal');
             }
+
+            // Stagger animation for grid items
+            const parent = el.closest('.grid, .books-grid, .gallery-grid, .hero-stats, .stats-grid, .highlight-grid');
+            if (parent) {
+                const siblings = Array.from(parent.children);
+                const siblingIndex = siblings.indexOf(el);
+                el.dataset.revealDelay = siblingIndex * 100;
+            }
+
             revealObserver.observe(el);
         });
     }
