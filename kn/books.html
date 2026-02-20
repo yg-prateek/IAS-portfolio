@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="kn">
 
 <head>
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
@@ -52,67 +52,106 @@
             </section>
             <section class="section">
                 <div class="container">
-                    <div class="books-grid">
-                        <article class="card book-card"><img src="../assets/images/books/book-1.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">Governance and Development</h3>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2020</p>
-                            </div>
-                        </article>
-                        <article class="card book-card"><img src="../assets/images/books/book-2.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">Rural Transformation</h3>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2018</p>
-                            </div>
-                        </article>
-                        <article class="card book-card"><img src="../assets/images/books/book-3.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">ಆಡಳಿತದ ದಾರಿ</h3>
-                                <p class="book-meta">ಕನ್ನಡ • 2019</p>
-                            </div>
-                        </article>
-                        <article class="card book-card"><img src="../assets/images/books/book-4.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">Public Administration</h3>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2017</p>
-                            </div>
-                        </article>
-                        <article class="card book-card"><img src="../assets/images/books/book-5.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">District Administration</h3>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2015</p>
-                            </div>
-                        </article>
-                        <article class="card book-card"><img src="../assets/images/books/book-6.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ</h3>
-                                <p class="book-meta">ಕನ್ನಡ • 2016</p>
-                            </div>
-                        </article>
-                        <article class="card book-card"><img src="../assets/images/books/book-7.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">Civil Service Values</h3>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2014</p>
-                            </div>
-                        </article>
-                        <article class="card book-card"><img src="../assets/images/books/book-8.png" alt="ಪುಸ್ತಕ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h3 class="book-title">Leadership in Governance</h3>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2012</p>
-                            </div>
-                        </article>
+
+                    <!-- Intro -->
+                    <div class="books-intro">
+                        <p>
+                            ಲೇಖಕರಾಗಿ, ಡಾ. ರವಿ ಅವರು ತಮ್ಮ ವಿಸ್ತೃತ ಕ್ಷೇತ್ರ ಅನುಭವವನ್ನು ಆಡಳಿತದಲ್ಲಿ
+                            ಆಸಕ್ತಿ ಹೊಂದಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳು, ವೃತ್ತಿಪರರು ಮತ್ತು ನಾಗರಿಕರಿಗೆ ಸುಲಭವಾಗಿ
+                            ಅರ್ಥವಾಗುವಂತೆ ತರಲು ಪ್ರಯತ್ನಿಸಿದ್ದಾರೆ.
+                        </p>
                     </div>
+
+                    <!-- Books Grid -->
+                    <div class="books-grid">
+
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-1.png" alt="ನಮ್ಮ ಉದ್ಧಾರ ನಮ್ಮಿಂದಲೇ"
+                                    class="book-cover" loading="lazy">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ನಮ್ಮ ಉದ್ಧಾರ ನಮ್ಮಿಂದಲೇ</h3>
+                            </div>
+                        </article>
+
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-2.png" alt="ಪ್ರೇಮಾಲಿ" class="book-cover"
+                                    loading="lazy">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಪ್ರೇಮಾಲಿ</h3>
+                            </div>
+                        </article>
+
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-3.png" alt="ಬದುಕೋಣು ಬಾರಾ" class="book-cover"
+                                    loading="lazy">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಬದುಕೋಣು ಬಾರಾ</h3>
+                            </div>
+                        </article>
+
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-4.png" alt="ಅಂಬೇಡ್ಕರ್ ಇಲ್ಲದ ಭಾರತ"
+                                    class="book-cover" loading="lazy">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಅಂಬೇಡ್ಕರ್ ಇಲ್ಲದ ಭಾರತ</h3>
+                            </div>
+                        </article>
+
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-5.png" alt="ಯಾರನ್ನು ನಿರ್ಲಕ್ಷಿಸಬೇಡಿ"
+                                    class="book-cover" loading="lazy">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಯಾರನ್ನು ನಿರ್ಲಕ್ಷಿಸಬೇಡಿ</h3>
+                            </div>
+                        </article>
+
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-6.png" alt="ಈ ಜೀವನ ನಮ್ಮದು" class="book-cover"
+                                    loading="lazy">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಈ ಜೀವನ ನಮ್ಮದು</h3>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Writing Themes -->
+                    <div class="writing-themes">
+                        <h2>ಬರವಣಿಗೆಯ ವಿಷಯಗಳು</h2>
+                        <p>
+                            ಡಾ. ರವಿ ಅವರ ಬರವಣಿಗೆಗಳು ನೀತಿ, ಅಭ್ಯಾಸ ಮತ್ತು ಜನ-ಕೇಂದ್ರಿತ ಆಡಳಿತದ
+                            ಛೇದನವನ್ನು ಅನ್ವೇಷಿಸುತ್ತವೆ:
+                        </p>
+                        <div class="themes-list">
+                            <span class="theme-tag">ಸಾರ್ವಜನಿಕ ಆಡಳಿತ</span>
+                            <span class="theme-tag">ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ</span>
+                            <span class="theme-tag">ಜಿಲ್ಲಾ ಆಡಳಿತ</span>
+                            <span class="theme-tag">ನೀತಿ ಜಾರಿ</span>
+                            <span class="theme-tag">ಇ-ಆಡಳಿತ</span>
+                            <span class="theme-tag">ನಾಗರಿಕ ಸೇವಾ ನೈತಿಕತೆ</span>
+                            <span class="theme-tag">ನಾಯಕತ್ವ</span>
+                            <span class="theme-tag">ವಿಕೇಂದ್ರೀಕರಣ</span>
+                            <span class="theme-tag">ಸಾಮಾಜಿಕ ಕಲ್ಯಾಣ</span>
+                            <span class="theme-tag">ಸಮರ್ಥನೀಯ ಅಭಿವೃದ್ಧಿ</span>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </main>
+
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-content">

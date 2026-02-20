@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="kn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್ - ಹಿರಿಯ ಭಾರತೀಯ ಆಡಳಿತ ಸೇವಾ ಅಧಿಕಾರಿ, ಆಡಳಿತಗಾರ ಮತ್ತು ಲೇಖಕರು.">
+        content="ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್ — ಹಿರಿಯ ಭಾರತೀಯ ಆಡಳಿತ ಸೇವಾ ಅಧಿಕಾರಿ, ಆಡಳಿತಗಾರ ಮತ್ತು ಲೇಖಕರು. ಕರ್ನಾಟಕದ ಆಡಳಿತ ಮತ್ತು ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ದಶಕಗಳ ಸೇವೆ.">
     <meta name="keywords" content="ಡಾ ಎಂ ಆರ್ ರವಿ, ಐಎಎಸ್, ಭಾರತೀಯ ಆಡಳಿತ ಸೇವೆ, ಕರ್ನಾಟಕ, ಆಡಳಿತ">
 
     <title>ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್ | ಹಿರಿಯ ಆಡಳಿತಗಾರ ಮತ್ತು ಲೇಖಕ</title>
@@ -14,8 +14,88 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Homepage font override -->
+    <style>
+        :root {
+            --font-heading: 'Averia Serif Libre', Georgia, serif;
+            --font-body: 'Noto Sans Kannada', 'Geist Mono', 'Courier New', monospace;
+            --font-size-h1: 3.75rem;
+            --font-size-h2: 2.25rem;
+        }
+
+        /* Averia Serif Libre — literary headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Averia Serif Libre', serif;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            line-height: 1.18;
+        }
+
+        /* Hero h1 */
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+
+        /* Eyebrow labels — Geist Mono uppercase */
+        .about-preview-label,
+        .hero-subtitle {
+            font-family: 'Geist Mono', monospace;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 0.75rem;
+        }
+
+        /* Tagline — Noto Sans Kannada for Kannada script */
+        .hero-tagline {
+            font-family: 'Noto Sans Kannada', 'Geist Mono', monospace;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            line-height: 1.85;
+        }
+
+        /* Pull-quote — Averia italic */
+        .quote-text {
+            font-family: 'Averia Serif Libre', serif;
+            font-style: italic;
+            font-weight: 400;
+            letter-spacing: 0.015em;
+            line-height: 1.75;
+        }
+
+        /* Stats — Geist Mono numerals */
+        .hero-stat-number,
+        .stat-number {
+            font-family: 'Geist Mono', monospace;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --font-size-h1: 2.25rem;
+                --font-size-h2: 1.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --font-size-h1: 1.875rem;
+                --font-size-h2: 1.5rem;
+            }
+        }
+    </style>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/css/base.css">
@@ -57,24 +137,24 @@
         <!-- Main Content -->
         <main id="main-content" class="main-content" tabindex="-1">
 
-            <!-- Hero Section - Fullscreen Dark -->
-            <section class="hero hero-fullscreen home-hero">
-                <!-- Decorative Elements -->
-                <div class="hero-decoration hero-decoration-1"></div>
-                <div class="hero-decoration hero-decoration-2"></div>
+            <!-- ── 1. ಹೀರೋ ವಿಭಾಗ ── -->
+            <section class="hero hero-fullscreen home-hero" aria-label="ಪರಿಚಯ">
+                <div class="hero-decoration hero-decoration-1" aria-hidden="true"></div>
+                <div class="hero-decoration hero-decoration-2" aria-hidden="true"></div>
 
                 <div class="container">
                     <div class="hero-content">
                         <div class="hero-text">
-                            <p class="hero-subtitle">ಭಾರತೀಯ ಆಡಳಿತ ಸೇವೆ (ಐಎಎಸ್)</p>
+                            <p class="hero-subtitle">ಭಾರತೀಯ ಆಡಳಿತ ಸೇವೆ (ಐಎಎಸ್) · ಕರ್ನಾಟಕ ಕೇಡರ್</p>
                             <h1>ಡಾ. ಎಂ. ಆರ್. ರವಿ</h1>
                             <p class="hero-tagline">
                                 ಜೀವನವನ್ನು ಪರಿವರ್ತಿಸುವ ಆಡಳಿತಕ್ಕೆ ಸಮರ್ಪಿತ. ಸಂಸ್ಥೆಗಳನ್ನು
                                 ನಿರ್ಮಿಸುವುದು, ಸಮುದಾಯಗಳನ್ನು ಸಬಲೀಕರಣಗೊಳಿಸುವುದು ಮತ್ತು
-                                ಸುಸ್ಥಿರ ಅಭಿವೃದ್ಧಿಗಾಗಿ ನೀತಿಗಳನ್ನು ರೂಪಿಸುವ ದಶಕಗಳ ಸೇವೆ.
+                                ಕರ್ನಾಟಕದ ಸುಸ್ಥಿರ ಅಭಿವೃದ್ಧಿಗಾಗಿ ನೀತಿಗಳನ್ನು ರೂಪಿಸುವ
+                                ಮೂರು ದಶಕಗಳ ಸೇವೆ.
                             </p>
 
-                            <div class="hero-stats">
+                            <div class="hero-stats" aria-label="ವೃತ್ತಿ ಸಾಧನೆಗಳು">
                                 <div class="hero-stat">
                                     <span class="hero-stat-number counter" data-target="35">35+</span>
                                     <span class="hero-stat-label">ಸೇವಾ ವರ್ಷಗಳು</span>
@@ -85,7 +165,7 @@
                                 </div>
                                 <div class="hero-stat">
                                     <span class="hero-stat-number counter" data-target="8">8</span>
-                                    <span class="hero-stat-label">ಪುಸ್ತಕಗಳು</span>
+                                    <span class="hero-stat-label">ಪ್ರಕಟಿತ ಪುಸ್ತಕಗಳು</span>
                                 </div>
                             </div>
 
@@ -97,32 +177,35 @@
 
                         <div class="hero-image">
                             <img src="../assets/images/hero/portrait.png"
-                                alt="ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್ - ವೃತ್ತಿಪರ ಭಾವಚಿತ್ರ" class="hero-portrait" loading="eager">
+                                alt="ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್ — ವೃತ್ತಿಪರ ಭಾವಚಿತ್ರ" class="hero-portrait" loading="eager">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- About Preview Section -->
-            <section class="section">
+            <!-- ── 2. ಪರಿಚಯ ಪೂರ್ವಾವಲೋಕನ — ಗ್ಯಾಲರಿ ಚಿತ್ರ ── -->
+            <section class="section section-alt" aria-labelledby="about-preview-heading">
                 <div class="container">
                     <div class="about-preview reveal">
                         <div class="about-preview-image reveal-left">
-                            <img src="../assets/images/hero/portrait.png" alt="ಡಾ. ಎಂ. ಆರ್. ರವಿ ಕೆಲಸದಲ್ಲಿ">
+                            <img src="../assets/images/gallery/gallery-4.JPG"
+                                alt="ಸರ್ಕಾರಿ ಸಮ್ಮೇಳನದಲ್ಲಿ ಡಾ. ಎಂ. ಆರ್. ರವಿ">
                         </div>
                         <div class="about-preview-content reveal-right">
                             <span class="about-preview-label">ಡಾ. ರವಿ ಬಗ್ಗೆ</span>
-                            <h2 class="about-preview-title">ಸಾರ್ವಜನಿಕ ಸೇವೆಗೆ ಸಮರ್ಪಿತ ಜೀವನ</h2>
+                            <h2 id="about-preview-heading" class="about-preview-title">
+                                ಸಾರ್ವಜನಿಕ ಸೇವೆಗೆ ಸಮರ್ಪಿತ ಜೀವನ
+                            </h2>
                             <p class="about-preview-text">
                                 ಡಾ. ಎಂ. ಆರ್. ರವಿ ಭಾರತೀಯ ಆಡಳಿತ ಸೇವೆಯ ಕರ್ನಾಟಕ ಕೇಡರ್‌ಗೆ ಸೇರಿದವರಾಗಿದ್ದು,
                                 ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ, ಶಿಕ್ಷಣ, ಕಂದಾಯ ಮತ್ತು ನಗರ ಅಭಿವೃದ್ಧಿ ಸೇರಿದಂತೆ ಹಲವು
-                                ಇಲಾಖೆಗಳಲ್ಲಿ ಪ್ರಮುಖ ಹುದ್ದೆಗಳನ್ನು ನಿರ್ವಹಿಸಿದ್ದಾರೆ. ಅವರ ವಿಧಾನವು ತಳಮಟ್ಟದ
+                                ಇಲಾಖೆಗಳಲ್ಲಿ ಪ್ರಮುಖ ಹುದ್ದೆಗಳನ್ನು ನಿರ್ವಹಿಸಿದ್ದಾರೆ. ಅವರ ವಿಧಾನ ತಳಮಟ್ಟದ
                                 ತಿಳುವಳಿಕೆಯನ್ನು ಕಾರ್ಯತಂತ್ರದ ದೃಷ್ಟಿಯೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತದೆ.
                             </p>
                             <p class="about-preview-text">
-                                ಮೂರು ದಶಕಗಳ ಅನುಭವದೊಂದಿಗೆ, ಡಾ. ರವಿ ಸುಸ್ಥಿರ ಅಭಿವೃದ್ಧಿ ಮತ್ತು
-                                ಸಮುದಾಯ ಸಬಲೀಕರಣಕ್ಕೆ ಆದ್ಯತೆ ನೀಡುವ ಪರಿವರ್ತನಾತ್ಮಕ ನೀತಿಗಳನ್ನು
-                                ಜಾರಿಗೆ ತರುವಲ್ಲಿ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸಿದ್ದಾರೆ.
+                                ಎಂಟು ಪುಸ್ತಕಗಳ ಲೇಖಕರಾಗಿ, ಅವರು ಆಡಳಿತ ಮತ್ತು ಸಾಹಿತ್ಯ ಜಗತ್ತುಗಳನ್ನು
+                                ಸಂಯೋಜಿಸುತ್ತಾರೆ — ಕ್ಷೇತ್ರದ ಅನುಭವಗಳನ್ನು ವಿಸ್ತೃತ ಓದುಗ ವರ್ಗದೊಂದಿಗೆ
+                                ಹಂಚಿಕೊಳ್ಳುತ್ತಾರೆ.
                             </p>
                             <a href="about.html" class="btn btn-secondary">ಡಾ. ರವಿ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ →</a>
                         </div>
@@ -130,8 +213,8 @@
                 </div>
             </section>
 
-            <!-- Stats Counter Section -->
-            <section class="stats-section">
+            <!-- ── 3. ಅಂಕಿ ಅಂಶ ── -->
+            <section class="stats-section" aria-label="ಪ್ರಮುಖ ಸಾಧನೆಗಳು">
                 <div class="container">
                     <div class="stats-grid">
                         <div class="stat-item">
@@ -143,7 +226,7 @@
                             <span class="stat-label">ಪ್ರಮುಖ ಹುದ್ದೆಗಳು</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number counter" data-target="12">12</span>
+                            <span class="stat-number counter" data-target="20">20+</span>
                             <span class="stat-label">ಪ್ರಶಸ್ತಿಗಳು</span>
                         </div>
                         <div class="stat-item">
@@ -154,18 +237,18 @@
                 </div>
             </section>
 
-            <!-- Areas of Impact Section -->
-            <section class="section home-highlights">
+            <!-- ── 4. ಪ್ರಭಾವ ಕ್ಷೇತ್ರಗಳು ── -->
+            <section class="section home-highlights" aria-labelledby="impact-heading">
                 <div class="container">
                     <div class="section-header">
-                        <!-- <span class="about-preview-label">ಪರಿಣತಿ</span> -->
-                        <h5 class="about-preview-label">ಪರಿಣತಿ</h5>
-                        <h2>ಪರಿಣಾಮದ ಕ್ಷೇತ್ರಗಳು</h2>
-                        <p>ಡಾ. ರವಿ ಆಡಳಿತ ಮತ್ತು ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ಗಮನಾರ್ಹ ಕೊಡುಗೆ ನೀಡಿರುವ ಪ್ರಮುಖ ಕ್ಷೇತ್ರಗಳು</p>
+                        <span class="about-preview-label">ಉಪಕ್ರಮಗಳು</span>
+                        <h2 id="impact-heading">ಪ್ರಭಾವ ಕ್ಷೇತ್ರಗಳು</h2>
+                        <p>ಆಡಳಿತ ಮತ್ತು ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ಡಾ. ರವಿ ಗಮನಾರ್ಹ ಕೊಡುಗೆ ನೀಡಿದ ಪ್ರಮುಖ ಕ್ಷೇತ್ರಗಳು</p>
                     </div>
 
                     <div class="highlight-grid">
-                        <div class="feature-card">
+
+                        <a href="impact.html" class="feature-card" aria-label="ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ — ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/rural-development.png" alt="ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ">
                             </div>
@@ -173,14 +256,14 @@
                                 <span class="feature-tag">ಆಡಳಿತ</span>
                                 <h3 class="feature-title">ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ</h3>
                                 <p class="feature-description">
-                                    500 ಕ್ಕೂ ಹೆಚ್ಚು ಹಳ್ಳಿಗಳನ್ನು ತಲುಪುವ ಗ್ರಾಮೀಣ ಮೂಲಸೌಕರ್ಯ,
-                                    ಜೀವನೋಪಾಯ ಕಾರ್ಯಕ್ರಮಗಳು ಮತ್ತು ಸಮುದಾಯ ಸಬಲೀಕರಣದಲ್ಲಿ ಉಪಕ್ರಮಗಳನ್ನು ಮುನ್ನಡೆಸಿದರು.
+                                    ಗ್ರಾಮೀಣ ಮೂಲಸೌಕರ್ಯ, ಜೀವನೋಪಾಯ ಕಾರ್ಯಕ್ರಮಗಳು ಮತ್ತು
+                                    500ಕ್ಕೂ ಹೆಚ್ಚು ಗ್ರಾಮಗಳನ್ನು ತಲುಪಿದ ಸಮುದಾಯ ಸಬಲೀಕರಣಕ್ಕೆ ಮುಂದಾಳತ್ವ.
                                 </p>
-                                <!-- <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span> -->
+                                <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="feature-card">
+                        <a href="impact.html" class="feature-card" aria-label="ಶಿಕ್ಷಣ ಸುಧಾರಣೆ — ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/education-reform.png" alt="ಶಿಕ್ಷಣ ಸುಧಾರಣೆ">
                             </div>
@@ -188,14 +271,14 @@
                                 <span class="feature-tag">ನೀತಿ</span>
                                 <h3 class="feature-title">ಶಿಕ್ಷಣ ಸುಧಾರಣೆ</h3>
                                 <p class="feature-description">
-                                    ಗುಣಮಟ್ಟ ಸುಧಾರಣೆ, ಶಿಕ್ಷಕರ ತರಬೇತಿ ಮತ್ತು ಸಮಗ್ರ
-                                    ಶಿಕ್ಷಣ ಕಾರ್ಯಕ್ರಮಗಳ ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸಿದ ಶೈಕ್ಷಣಿಕ ನೀತಿ ಸುಧಾರಣೆಗಳನ್ನು ಮುನ್ನಡೆಸಿದರು.
+                                    ಗುಣಮಟ್ಟ ಸುಧಾರಣೆ, ಶಿಕ್ಷಕ ತರಬೇತಿ ಮತ್ತು ಒಳಗೊಳ್ಳುವಿಕೆ
+                                    ಶಿಕ್ಷಣ ಕಾರ್ಯಕ್ರಮಗಳ ಮೇಲೆ ಕೇಂದ್ರೀಕೃತ ಶೈಕ್ಷಣಿಕ ನೀತಿ ಸುಧಾರಣೆಗಳ ನೇತೃತ್ವ.
                                 </p>
-                                <!-- <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span> -->
+                                <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="feature-card">
+                        <a href="impact.html" class="feature-card" aria-label="ನಗರ ಯೋಜನೆ — ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/urban-planning.png" alt="ನಗರ ಯೋಜನೆ">
                             </div>
@@ -203,92 +286,135 @@
                                 <span class="feature-tag">ಮೂಲಸೌಕರ್ಯ</span>
                                 <h3 class="feature-title">ನಗರ ಯೋಜನೆ</h3>
                                 <p class="feature-description">
-                                    ಸ್ಮಾರ್ಟ್ ಸಿಟಿ ಉಪಕ್ರಮಗಳು ಮತ್ತು ಮೂಲಸೌಕರ್ಯ ಆಧುನೀಕರಣದ
-                                    ಮೂಲಕ ಸುಸ್ಥಿರ ನಗರ ಅಭಿವೃದ್ಧಿಗೆ ಕೊಡುಗೆ ನೀಡಿದರು.
+                                    ಸ್ಮಾರ್ಟ್ ಸಿಟಿ ಉಪಕ್ರಮಗಳು ಮತ್ತು ಮೂಲಸೌಕರ್ಯ ಆಧುನೀಕರಣದ ಮೂಲಕ
+                                    ಸುಸ್ಥಿರ ನಗರ ಅಭಿವೃದ್ಧಿಗೆ ಕೊಡುಗೆ.
                                 </p>
-                                <!-- <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span> -->
+                                <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="feature-card">
+                        <a href="impact.html" class="feature-card" aria-label="ಆಡಳಿತ ಮತ್ತು ನೀತಿ — ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/governance-policy.png" alt="ಆಡಳಿತ ಮತ್ತು ನೀತಿ">
                             </div>
                             <div class="feature-card-body">
                                 <span class="feature-tag">ನಾಯಕತ್ವ</span>
-                                <h3 class="feature-title">ಆಡಳಿತ ಮತ್ತು ನೀತಿ</h3>
+                                <h3 class="feature-title">ಆಡಳಿತ & ನೀತಿ</h3>
                                 <p class="feature-description">
-                                    ಪಾರದರ್ಶಕತೆ, ದಕ್ಷತೆ ಮತ್ತು ನಾಗರಿಕ-ಕೇಂದ್ರಿತ ಆಡಳಿತದ
-                                    ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸಿದ ನೀತಿಗಳನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಿ ಜಾರಿಗೆ ತಂದರು.
+                                    ಪಾರದರ್ಶಕತೆ, ದಕ್ಷತೆ ಮತ್ತು ನಾಗರಿಕ-ಕೇಂದ್ರಿತ ಆಡಳಿತದ ಮೇಲೆ
+                                    ಕೇಂದ್ರೀಕೃತ ನೀತಿಗಳ ರಚನೆ ಮತ್ತು ಅನುಷ್ಠಾನ.
                                 </p>
-                                <!-- <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span> -->
+                                <span class="feature-arrow">ಅನ್ವೇಷಿಸಿ →</span>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
 
                     <div class="text-center mt-2xl">
-                        <a href="impact.html" class="btn btn-primary">ಎಲ್ಲಾ ಉಪಕ್ರಮಗಳನ್ನು ಅನ್ವೇಷಿಸಿ →</a>
+                        <a href="impact.html" class="btn btn-primary">ಎಲ್ಲಾ ಉಪಕ್ರಮಗಳನ್ನು ನೋಡಿ →</a>
                     </div>
                 </div>
             </section>
 
-            <!-- Quote Section -->
-            <section class="quote-section">
+            <!-- ── 5. ಉದ್ಧರಣ ── -->
+            <section class="quote-section" aria-label="ಡಾ. ರವಿ ಅವರ ಉದ್ಧರಣ">
                 <div class="container container-narrow">
                     <p class="quote-text reveal">
-                        "ನಿಜವಾದ ಆಡಳಿತ ಎಂದರೆ ಅಧಿಕಾರವನ್ನು ಚಲಾಯಿಸುವುದಲ್ಲ, ಜನರನ್ನು ಸಬಲೀಕರಣಗೊಳಿಸುವುದು.
-                        ಪ್ರತಿಯೊಂದು ನೀತಿಯು ಸಾಮಾನ್ಯ ನಾಗರಿಕರ ಜೀವನವನ್ನು ಸ್ಪರ್ಶಿಸಬೇಕು ಮತ್ತು ಅವರ
-                        ದೈನಂದಿನ ಅಸ್ತಿತ್ವಕ್ಕೆ ಅಳೆಯಬಹುದಾದ ಸುಧಾರಣೆಯನ್ನು ತರಬೇಕು."
+                        "ನಿಜವಾದ ಆಡಳಿತ ಅಧಿಕಾರ ಚಲಾಯಿಸುವುದಲ್ಲ, ಜನರನ್ನು ಸಬಲೀಕರಿಸುವುದು.
+                        ಪ್ರತಿ ನೀತಿ ಸಾಮಾನ್ಯ ನಾಗರಿಕನ ಜೀವನವನ್ನು ಮುಟ್ಟಬೇಕು ಮತ್ತು
+                        ಅವರ ದೈನಂದಿನ ಜೀವನದಲ್ಲಿ ಅಳೆಯಬಹುದಾದ ಸುಧಾರಣೆ ತರಬೇಕು."
                     </p>
                     <p class="quote-author reveal">— <strong>ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್</strong></p>
                 </div>
             </section>
 
-            <!-- Books Preview -->
-            <section class="section">
+            <!-- ── 6. ಗ್ಯಾಲರಿ ಝಲಕ್ ── -->
+            <section class="section section-alt home-gallery-glimpse" aria-labelledby="glimpse-heading">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="about-preview-label">ಫೋಟೋ ಗ್ಯಾಲರಿ</span>
+                        <h2 id="glimpse-heading">ಸೇವೆಯ ಕ್ಷಣಗಳು</h2>
+                        <p>ಕ್ಷೇತ್ರ, ಸಮುದಾಯ ಮತ್ತು ಒಂದು ವೃತ್ತಿಜೀವನ ವ್ಯಾಖ್ಯಾನಿಸುವ ಘಟನೆಗಳ ಒಂದು ಝಲಕ್</p>
+                    </div>
+
+                    <div class="home-gallery-grid">
+                        <a href="gallery.html" class="home-gallery-item home-gallery-item--wide"
+                            aria-label="ಸಂಪೂರ್ಣ ಗ್ಯಾಲರಿ ನೋಡಿ">
+                            <img src="../assets/images/gallery/gallery-1.JPG" alt="ರಾಜ್ಯ ಮಟ್ಟದ ಆಡಳಿತ ಸಭೆ"
+                                loading="lazy">
+                            <span class="home-gallery-overlay">ಅಧಿಕೃತ ಕಾರ್ಯಕ್ರಮಗಳು</span>
+                        </a>
+                        <a href="gallery.html" class="home-gallery-item" aria-label="ಸಂಪೂರ್ಣ ಗ್ಯಾಲರಿ ನೋಡಿ">
+                            <img src="../assets/images/gallery/gallery-2.JPG" alt="ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ ಕ್ಷೇತ್ರ ಭೇಟಿ"
+                                loading="lazy">
+                            <span class="home-gallery-overlay">ಕ್ಷೇತ್ರ ಭೇಟಿಗಳು</span>
+                        </a>
+                        <a href="gallery.html" class="home-gallery-item" aria-label="ಸಂಪೂರ್ಣ ಗ್ಯಾಲರಿ ನೋಡಿ">
+                            <img src="../assets/images/gallery/gallery-3.JPG" alt="ಸಮುದಾಯ ಸಂಪರ್ಕ ಕಾರ್ಯಕ್ರಮ"
+                                loading="lazy">
+                            <span class="home-gallery-overlay">ಸಮುದಾಯ</span>
+                        </a>
+                        <a href="gallery.html" class="home-gallery-item" aria-label="ಸಂಪೂರ್ಣ ಗ್ಯಾಲರಿ ನೋಡಿ">
+                            <img src="../assets/images/gallery/SAI_9212.JPG" alt="ಪ್ರಶಸ್ತಿ ಸಮಾರಂಭ" loading="lazy">
+                            <span class="home-gallery-overlay">ಪ್ರಶಸ್ತಿಗಳು</span>
+                        </a>
+                    </div>
+
+                    <div class="text-center mt-xl">
+                        <a href="gallery.html" class="btn btn-secondary">ಎಲ್ಲಾ ಫೋಟೋಗಳನ್ನು ನೋಡಿ →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── 7. ಪುಸ್ತಕ ಪೂರ್ವಾವಲೋಕನ ── -->
+            <section class="section" aria-labelledby="books-heading">
                 <div class="container">
                     <div class="section-header">
                         <span class="about-preview-label">ಪ್ರಕಟಣೆಗಳು</span>
-                        <h2>ಚಿಂತನಾ ನಾಯಕತ್ವ</h2>
-                        <p>ದಶಕಗಳ ಆಡಳಿತ ಅನುಭವದಿಂದ ಮುದ್ರಣದಲ್ಲಿ ಸೆರೆಹಿಡಿಯಲಾದ ಒಳನೋಟಗಳು</p>
+                        <h2 id="books-heading">ಚಿಂತನ ನಾಯಕತ್ವ</h2>
+                        <p>ದಶಕಗಳ ಆಡಳಿತ ಅನುಭವದಿಂದ ಮೂಡಿದ ದೃಷ್ಟಿಕೋನಗಳು</p>
                     </div>
 
-                    <div class="grid grid-cols-4">
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-1.png" alt="Governance & Development ಪುಸ್ತಕದ ಮುಖಪುಟ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">Governance & Development</h4>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2020</p>
+                    <div class="books-grid">
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-1.png" alt="ನಮ್ಮ ಉದ್ಧಾರ ನಮ್ಮಿನದಲೆ"
+                                    class="book-cover" loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ನಮ್ಮ ಉದ್ಧಾರ ನಮ್ಮಿನದಲೆ</h3>
+                            </div>
+                        </article>
 
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-2.png" alt="Rural Transformation ಪುಸ್ತಕದ ಮುಖಪುಟ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">Rural Transformation</h4>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2018</p>
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-2.png" alt="ಪ್ರೇಮಲಾಳಿ" class="book-cover"
+                                    loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಪ್ರೇಮಲಾಳಿ</h3>
+                            </div>
+                        </article>
 
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-3.png" alt="ಆಡಳಿತದ ದಾರಿ ಪುಸ್ತಕದ ಮುಖಪುಟ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">ಆಡಳಿತದ ದಾರಿ</h4>
-                                <p class="book-meta">ಕನ್ನಡ • 2019</p>
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-3.png" alt="ಬದುಕೋಣು ಬಾರ" class="book-cover"
+                                    loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಬದುಕೋಣು ಬಾರ</h3>
+                            </div>
+                        </article>
 
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-4.png" alt="Public Administration ಪುಸ್ತಕದ ಮುಖಪುಟ"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">Public Administration</h4>
-                                <p class="book-meta">ಇಂಗ್ಲಿಷ್ • 2017</p>
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-4.png" alt="ಅಂಬೇಡ್ಕರ್ ಇಲ್ಲದ ಭಾರತ"
+                                    class="book-cover" loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">ಅಂಬೇಡ್ಕರ್ ಇಲ್ಲದ ಭಾರತ</h3>
+                            </div>
+                        </article>
                     </div>
 
                     <div class="text-center mt-xl">
@@ -297,16 +423,17 @@
                 </div>
             </section>
 
-            <!-- CTA Banner -->
-            <section class="cta-banner">
+            <!-- ── 8. ಕರೆ-ಕ್ರಿಯೆ ── -->
+            <section class="cta-banner" aria-label="ಸಂಪರ್ಕ ಕರೆ-ಕ್ರಿಯೆ">
                 <div class="container">
-                    <h2 class="cta-banner-title reveal">ಡಾ. ರವಿ ಅವರನ್ನು ಸಂಪರ್ಕಿಸಿ</h2>
+                    <h2 class="cta-banner-title reveal">ಡಾ. ರವಿ ಅವರೊಂದಿಗೆ ಸಂಪರ್ಕ ಮಾಡಿ</h2>
                     <p class="cta-banner-text reveal">
-                        ಉಪನ್ಯಾಸ, ಸಮಾಲೋಚನೆ ಅಥವಾ ಸಹಯೋಗದ ಅವಕಾಶಗಳಿಗಾಗಿ
+                        ಭಾಷಣ ಕಾರ್ಯಕ್ರಮಗಳು, ಸಮಾಲೋಚನೆ ಅಥವಾ ಸಹಯೋಗ ಅವಕಾಶಗಳಿಗಾಗಿ
                     </p>
                     <div class="reveal">
                         <a href="contact.html" class="btn btn-primary">ಸಂಪರ್ಕಿಸಿ</a>
-                        <a href="gallery.html" class="btn btn-gold-outline">ಗ್ಯಾಲರಿ ನೋಡಿ</a>
+                        <a href="gallery.html" class="btn btn-gold-outline"
+                            style="margin-left: var(--space-md);">ಗ್ಯಾಲರಿ ನೋಡಿ</a>
                     </div>
                 </div>
             </section>
@@ -340,7 +467,7 @@
                         <h4>ಸಂಪನ್ಮೂಲಗಳು</h4>
                         <nav class="footer-links">
                             <a href="impact.html">ಪ್ರಮುಖ ಉಪಕ್ರಮಗಳು</a>
-                            <a href="awards.html">ಪ್ರಶಸ್ತಿಗಳು ಮತ್ತು ಮನ್ನಣೆ</a>
+                            <a href="awards.html">ಪ್ರಶಸ್ತಿ ಮತ್ತು ಗೌರವ</a>
                             <a href="gallery.html">ಫೋಟೋ ಗ್ಯಾಲರಿ</a>
                         </nav>
                     </div>
@@ -356,7 +483,7 @@
 
                 <div class="footer-bottom">
                     <p class="footer-copyright">
-                        © 2026 ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+                        &copy; 2026 ಡಾ. ಎಂ. ಆರ್. ರವಿ, ಐಎಎಸ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
                     </p>
                 </div>
             </div>

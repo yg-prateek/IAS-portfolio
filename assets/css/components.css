@@ -277,14 +277,15 @@
 
 .logo {
     font-family: var(--font-heading);
-    font-size: var(--font-size-h4);
+    font-size: 1.15rem;
     font-weight: var(--font-weight-bold);
     color: var(--color-text-light);
+    letter-spacing: 0.02em;
     transition: color var(--transition-fast);
 }
 
 .logo:hover {
-    color: var(--color-accent-gold);
+    color: var(--color-accent-gold-light);
 }
 
 /* Navigation Menu */
@@ -295,9 +296,13 @@
 }
 
 .nav-menu a {
-    font-size: var(--font-size-body);
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    /* 13px — Geist Mono nav items look refined at this size */
     font-weight: var(--font-weight-medium);
-    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
     transition: color var(--transition-fast);
     padding: var(--space-xs) 0;
     position: relative;
@@ -307,27 +312,31 @@
     color: var(--color-text-light);
 }
 
+/* Active state: white text + persistent gold underline */
 .nav-menu a.active {
-    color: var(--color-accent-gold);
+    color: var(--color-text-light);
 }
 
+/* Underline slide — transforms from center for polish */
 .nav-menu a::after {
     content: '';
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 0;
+    right: 0;
     height: 2px;
     background: var(--gradient-gold);
-    transition: width var(--transition-normal);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--transition-normal);
 }
 
 .nav-menu a:hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 .nav-menu a.active::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 /* Language Toggle - Floating */
@@ -1039,12 +1048,20 @@
 .timeline-marker {
     position: absolute;
     left: calc(-1 * var(--space-xl) - 5px);
-    top: 0;
-    width: 12px;
-    height: 12px;
-    background-color: var(--color-accent-primary);
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    /* Gold dot — career milestones deserve the accent color */
+    background-color: var(--color-accent-gold);
     border-radius: 50%;
-    border: 2px solid var(--color-background);
+    border: 3px solid var(--color-background);
+    box-shadow: 0 0 0 2px var(--color-accent-gold);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(212, 168, 83, 0.2);
 }
 
 .timeline-header {
@@ -1053,32 +1070,38 @@
     align-items: flex-start;
     gap: var(--space-md);
     cursor: pointer;
-    padding: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
     background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border);
+    border: 1.5px solid var(--color-border);
     border-radius: var(--radius-md);
-    transition: border-color var(--transition-normal);
+    transition: border-color var(--transition-normal), background-color var(--transition-fast);
 }
 
 .timeline-header:hover {
-    border-color: var(--color-accent-primary);
+    border-color: var(--color-accent-gold);
+    background-color: rgba(212, 168, 83, 0.04);
 }
 
 .timeline-header[aria-expanded="true"] {
+    border-color: var(--color-accent-gold);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border-bottom-color: transparent;
 }
 
 .timeline-title {
     font-family: var(--font-heading);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
+    letter-spacing: 0.01em;
     margin-bottom: var(--space-xs);
 }
 
 .timeline-meta {
     font-size: var(--font-size-small);
     color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    letter-spacing: 0.03em;
 }
 
 .timeline-toggle {
@@ -1088,7 +1111,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-accent-primary);
+    /* Switch to gold for the toggle chevron */
+    color: var(--color-accent-gold);
     transition: transform var(--transition-normal);
 }
 
@@ -1099,8 +1123,8 @@
 .timeline-content {
     display: none;
     padding: var(--space-lg);
-    background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    border: 1.5px solid var(--color-accent-gold);
     border-top: none;
     border-bottom-left-radius: var(--radius-md);
     border-bottom-right-radius: var(--radius-md);
@@ -1254,8 +1278,11 @@
 
 .form-label {
     display: block;
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-medium);
+    font-family: var(--font-body);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     margin-bottom: var(--space-sm);
     color: var(--color-text-primary);
 }
@@ -1264,12 +1291,13 @@
 .form-textarea,
 .form-select {
     width: 100%;
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    /* slightly more generous padding */
     font-family: var(--font-body);
     font-size: var(--font-size-body);
     color: var(--color-text-primary);
-    background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    border: 1.5px solid var(--color-border);
     border-radius: var(--radius-md);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -1278,13 +1306,15 @@
 .form-textarea:focus,
 .form-select:focus {
     outline: none;
-    border-color: var(--color-accent-primary);
-    box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.1);
+    /* Gold ring — matches the design system accent */
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.18);
 }
 
 .form-input::placeholder,
 .form-textarea::placeholder {
     color: var(--color-text-secondary);
+    opacity: 0.7;
 }
 
 .form-textarea {
@@ -1320,22 +1350,30 @@
     max-width: 700px;
     margin: 0 auto var(--space-2xl);
     position: relative;
+    /* Ensure every child stacks on its own line */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 }
 
 .section-label {
-    display: inline-block;
+    display: block;
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-semibold);
     color: var(--color-accent-gold);
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: var(--space-sm);
+    /* Geist Mono uppercase labels look crisp */
+    font-family: var(--font-body);
 }
 
 .section-header h2 {
+    display: block;
     margin-bottom: var(--space-sm);
     position: relative;
-    display: inline-block;
+    width: auto;
 }
 
 .section-header h2::after {
@@ -1490,6 +1528,8 @@
 }
 
 .page-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0.02em;
     margin-bottom: var(--space-sm);
     margin-top: var(--space-sm);
 }
@@ -1499,6 +1539,7 @@
     color: var(--color-text-secondary);
     max-width: 700px;
     margin-top: var(--space-sm);
+    line-height: var(--line-height-relaxed);
 }
 
 @media (max-width: 768px) {
@@ -1892,14 +1933,20 @@
 
 .page-hero.page-hero-dark h1 {
     color: var(--color-text-light);
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    letter-spacing: 0.02em;
     position: relative;
     z-index: 1;
 }
 
 .page-hero.page-hero-dark p {
-    color: var(--color-text-muted);
+    /* rgba(255,255,255,0.85) — more readable than the 70% muted token */
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.0625rem;
+    line-height: var(--line-height-relaxed);
     position: relative;
     z-index: 1;
+    max-width: 640px;
 }
 
 /* ========================================

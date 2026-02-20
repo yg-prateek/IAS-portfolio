@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Stylesheets -->
@@ -77,12 +77,12 @@
                     <div class="gallery-intro">
                         <p>
                             A visual journey through official events, field visits, award ceremonies,
-                            and community engagements. Click on any image to view in full size.
+                            and community engagements. Click any image to view it in full size.
                         </p>
                     </div>
 
-                    <!-- Gallery Filters -->
-                    <div class="gallery-filters">
+                    <!-- Filter Pills -->
+                    <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
                         <button class="gallery-filter active" data-filter="all">All</button>
                         <button class="gallery-filter" data-filter="official">Official Events</button>
                         <button class="gallery-filter" data-filter="field">Field Visits</button>
@@ -91,73 +91,72 @@
                     </div>
 
                     <!-- Gallery Grid -->
-                    <div class="gallery-grid" role="list" aria-label="Photo gallery">
+                    <div class="gallery-grid" role="list" aria-label="Photo gallery" id="gallery-grid">
 
-                        <div class="gallery-item" data-category="official" role="listitem">
-                            <img src="../assets/images/gallery/gallery-1.svg"
-                                alt="Dr. Ravi addressing officials at state-level meeting"
-                                data-fullsize="../assets/images/gallery/gallery-1.svg" loading="lazy">
+                        <div class="gallery-item" data-category="official" role="listitem"
+                            data-caption="Dr. Ravi addressing officials at a state-level administrative meeting">
+                            <img src="../assets/images/gallery/gallery-1.JPG"
+                                alt="Dr. Ravi addressing officials at a state-level administrative meeting"
+                                loading="lazy">
+                            <span class="gallery-caption">State-level Administrative Meeting</span>
+                            <span class="gallery-badge">Official</span>
                         </div>
 
-                        <div class="gallery-item" data-category="field" role="listitem">
-                            <img src="../assets/images/gallery/gallery-2.svg"
-                                alt="Field visit to rural development project"
-                                data-fullsize="../assets/images/gallery/gallery-2.svg" loading="lazy">
+                        <div class="gallery-item" data-category="field" role="listitem"
+                            data-caption="Field visit to a rural development project site">
+                            <img src="../assets/images/gallery/gallery-2.JPG"
+                                alt="Field visit to a rural development project site" loading="lazy">
+                            <span class="gallery-caption">Rural Development Field Visit</span>
+                            <span class="gallery-badge">Field</span>
                         </div>
 
-                        <div class="gallery-item" data-category="awards" role="listitem">
-                            <img src="../assets/images/gallery/gallery-3.svg"
-                                alt="Receiving Excellence in Public Administration Award"
-                                data-fullsize="../assets/images/gallery/gallery-3.svg" loading="lazy">
+                        <div class="gallery-item" data-category="community" role="listitem"
+                            data-caption="Interacting with community members during a public outreach program">
+                            <img src="../assets/images/gallery/gallery-3.JPG"
+                                alt="Interacting with community members during a public outreach program"
+                                loading="lazy">
+                            <span class="gallery-caption">Community Outreach Program</span>
+                            <span class="gallery-badge">Community</span>
                         </div>
 
-                        <div class="gallery-item" data-category="community" role="listitem">
-                            <img src="../assets/images/gallery/gallery-4.svg"
-                                alt="Interacting with village community members"
-                                data-fullsize="../assets/images/gallery/gallery-4.svg" loading="lazy">
+                        <div class="gallery-item" data-category="official" role="listitem"
+                            data-caption="Participating in a high-level government conference">
+                            <img src="../assets/images/gallery/gallery-4.JPG"
+                                alt="Participating in a high-level government conference" loading="lazy">
+                            <span class="gallery-caption">Government Conference</span>
+                            <span class="gallery-badge">Official</span>
                         </div>
 
-                        <div class="gallery-item" data-category="official" role="listitem">
-                            <img src="../assets/images/gallery/gallery-5.svg" alt="Meeting with government officials"
-                                data-fullsize="../assets/images/gallery/gallery-5.svg" loading="lazy">
+                        <div class="gallery-item" data-category="field" role="listitem"
+                            data-caption="Inspecting an infrastructure development project site">
+                            <img src="../assets/images/gallery/gallery-5.JPG"
+                                alt="Inspecting an infrastructure development project site" loading="lazy">
+                            <span class="gallery-caption">Infrastructure Inspection</span>
+                            <span class="gallery-badge">Field</span>
                         </div>
 
-                        <div class="gallery-item" data-category="field" role="listitem">
-                            <img src="../assets/images/gallery/gallery-6.svg"
-                                alt="Inspecting infrastructure project site"
-                                data-fullsize="../assets/images/gallery/gallery-6.svg" loading="lazy">
+                        <div class="gallery-item" data-category="community" role="listitem"
+                            data-caption="Speaking at a public event on governance and development">
+                            <img src="../assets/images/gallery/gallery-6.JPG"
+                                alt="Speaking at a public event on governance and development" loading="lazy">
+                            <span class="gallery-caption">Public Event — Governance & Development</span>
+                            <span class="gallery-badge">Community</span>
                         </div>
 
-                        <div class="gallery-item" data-category="awards" role="listitem">
-                            <img src="../assets/images/gallery/gallery-7.svg" alt="Award ceremony with dignitaries"
-                                data-fullsize="../assets/images/gallery/gallery-7.svg" loading="lazy">
+                        <div class="gallery-item" data-category="awards" role="listitem"
+                            data-caption="Receiving recognition at an award ceremony">
+                            <img src="../assets/images/gallery/SAI_9212.JPG"
+                                alt="Receiving recognition at an award ceremony" loading="lazy">
+                            <span class="gallery-caption">Award Ceremony</span>
+                            <span class="gallery-badge">Awards</span>
                         </div>
 
-                        <div class="gallery-item" data-category="community" role="listitem">
-                            <img src="../assets/images/gallery/gallery-8.svg" alt="Book release event"
-                                data-fullsize="../assets/images/gallery/gallery-8.svg" loading="lazy">
-                        </div>
-
-                        <div class="gallery-item" data-category="official" role="listitem">
-                            <img src="../assets/images/gallery/gallery-9.svg"
-                                alt="Participating in government conference"
-                                data-fullsize="../assets/images/gallery/gallery-9.svg" loading="lazy">
-                        </div>
-
-                        <div class="gallery-item" data-category="field" role="listitem">
-                            <img src="../assets/images/gallery/gallery-10.svg" alt="Visiting school education program"
-                                data-fullsize="../assets/images/gallery/gallery-10.svg" loading="lazy">
-                        </div>
-
-                        <div class="gallery-item" data-category="community" role="listitem">
-                            <img src="../assets/images/gallery/gallery-11.svg" alt="Speaking at public event"
-                                data-fullsize="../assets/images/gallery/gallery-11.svg" loading="lazy">
-                        </div>
-
-                        <div class="gallery-item" data-category="official" role="listitem">
-                            <img src="../assets/images/gallery/gallery-12.svg"
-                                alt="Official function with state leadership"
-                                data-fullsize="../assets/images/gallery/gallery-12.svg" loading="lazy">
+                        <div class="gallery-item" data-category="official" role="listitem"
+                            data-caption="Engaging with dignitaries at an official function">
+                            <img src="../assets/images/gallery/PHOTO-2023-10-10-19-54-22.jpg"
+                                alt="Engaging with dignitaries at an official function" loading="lazy">
+                            <span class="gallery-caption">Official Function with Dignitaries</span>
+                            <span class="gallery-badge">Official</span>
                         </div>
 
                     </div>
@@ -167,13 +166,24 @@
 
         </main>
 
+        <!-- Lightbox -->
+        <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&#10005;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8249;</button>
+            <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">&#8250;</button>
+            <div class="lightbox-inner">
+                <img class="lightbox-img" id="lightbox-img" src="" alt="">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
+            </div>
+        </div>
+
         <!-- Footer -->
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-section">
                         <h4>Dr. M. R. Ravi, IAS</h4>
-                        <p class="text-small" style="color: var(--color-text-secondary);">
+                        <p class="text-small" style="color: var(--color-text-muted);">
                             Senior Administrator & Author<br>
                             Indian Administrative Service
                         </p>
@@ -209,7 +219,7 @@
 
                 <div class="footer-bottom">
                     <p class="footer-copyright">
-                        © 2026 Dr. M. R. Ravi, IAS. All rights reserved.
+                        &copy; 2026 Dr. M. R. Ravi, IAS. All rights reserved.
                     </p>
                 </div>
             </div>
@@ -218,6 +228,86 @@
 
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/gallery.js"></script>
+    <script>
+        // Premium lightbox with keyboard nav
+        (function () {
+            const grid = document.getElementById('gallery-grid');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            const lbCap = document.getElementById('lightbox-caption');
+            const closeBtn = document.getElementById('lightbox-close');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+
+            let visibleItems = [];
+            let currentIdx = 0;
+
+            function getVisible() {
+                return [...grid.querySelectorAll('.gallery-item:not(.hidden)')];
+            }
+
+            function openLightbox(idx) {
+                visibleItems = getVisible();
+                currentIdx = idx;
+                const item = visibleItems[currentIdx];
+                const img = item.querySelector('img');
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lbCap.textContent = item.dataset.caption || img.alt;
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            function navigate(dir) {
+                visibleItems = getVisible();
+                currentIdx = (currentIdx + dir + visibleItems.length) % visibleItems.length;
+                const item = visibleItems[currentIdx];
+                const img = item.querySelector('img');
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lbCap.textContent = item.dataset.caption || img.alt;
+            }
+
+            grid.addEventListener('click', function (e) {
+                const item = e.target.closest('.gallery-item');
+                if (!item) return;
+                visibleItems = getVisible();
+                openLightbox(visibleItems.indexOf(item));
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            prevBtn.addEventListener('click', () => navigate(-1));
+            nextBtn.addEventListener('click', () => navigate(1));
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') navigate(-1);
+                if (e.key === 'ArrowRight') navigate(1);
+            });
+
+            // Filter logic
+            document.querySelectorAll('.gallery-filter').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.gallery-filter').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const filter = this.dataset.filter;
+                    grid.querySelectorAll('.gallery-item').forEach(item => {
+                        item.classList.toggle('hidden',
+                            filter !== 'all' && item.dataset.category !== filter);
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>

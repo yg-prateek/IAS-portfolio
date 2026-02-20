@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Dr. M. R. Ravi, IAS - Senior Indian Administrative Service Officer, Administrator, and Author. Decades of distinguished public service in governance and development.">
+        content="Dr. M. R. Ravi, IAS - Senior Indian Administrative Service Officer, Administrator, and Author. Decades of distinguished public service in governance and development across Karnataka.">
     <meta name="keywords"
         content="Dr M R Ravi, IAS, Indian Administrative Service, Karnataka, Governance, Public Administration">
     <meta name="author" content="Dr. M. R. Ravi, IAS">
@@ -16,8 +16,88 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Homepage font override -->
+    <style>
+        :root {
+            --font-heading: 'Averia Serif Libre', Georgia, serif;
+            --font-body: 'Geist Mono', 'Courier New', monospace;
+            --font-size-h1: 3.75rem;
+            --font-size-h2: 2.25rem;
+        }
+
+        /* Averia Serif Libre — literary, warmly imperfect letterforms */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Averia Serif Libre', serif;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            line-height: 1.18;
+        }
+
+        /* Hero h1 */
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+
+        /* Eyebrow labels — Geist Mono uppercase, typeset feel */
+        .about-preview-label,
+        .hero-subtitle {
+            font-family: 'Geist Mono', monospace;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 0.75rem;
+        }
+
+        /* Hero tagline — Geist Mono light */
+        .hero-tagline {
+            font-family: 'Geist Mono', monospace;
+            font-weight: 300;
+            letter-spacing: -0.01em;
+            line-height: 1.85;
+        }
+
+        /* Pull-quote — Averia italic for warmth */
+        .quote-text {
+            font-family: 'Averia Serif Libre', serif;
+            font-style: italic;
+            font-weight: 400;
+            letter-spacing: 0.015em;
+            line-height: 1.75;
+        }
+
+        /* Stats — Geist Mono, tabular numerals */
+        .hero-stat-number,
+        .stat-number {
+            font-family: 'Geist Mono', monospace;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --font-size-h1: 2.25rem;
+                --font-size-h2: 1.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --font-size-h1: 1.875rem;
+                --font-size-h2: 1.5rem;
+            }
+        }
+    </style>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/css/base.css">
@@ -28,7 +108,6 @@
 
 <body>
     <div class="page-wrapper">
-        <!-- Skip Link -->
         <a href="#main-content" class="skip-link">Skip to main content</a>
 
         <!-- Header -->
@@ -60,24 +139,23 @@
         <!-- Main Content -->
         <main id="main-content" class="main-content" tabindex="-1">
 
-            <!-- Hero Section - Fullscreen Dark -->
-            <section class="hero hero-fullscreen home-hero">
-                <!-- Decorative Elements -->
-                <div class="hero-decoration hero-decoration-1"></div>
-                <div class="hero-decoration hero-decoration-2"></div>
+            <!-- ── 1. Hero Section ── -->
+            <section class="hero hero-fullscreen home-hero" aria-label="Introduction">
+                <div class="hero-decoration hero-decoration-1" aria-hidden="true"></div>
+                <div class="hero-decoration hero-decoration-2" aria-hidden="true"></div>
 
                 <div class="container">
                     <div class="hero-content">
                         <div class="hero-text">
-                            <p class="hero-subtitle">Indian Administrative Service (IAS)</p>
+                            <p class="hero-subtitle">Indian Administrative Service (IAS) · Karnataka Cadre</p>
                             <h1>Dr. M. R. Ravi</h1>
                             <p class="hero-tagline">
-                                Dedicated to governance that transforms lives. Decades of service
+                                Dedicated to governance that transforms lives. Three decades of service
                                 building institutions, empowering communities, and shaping policies
                                 for sustainable development across Karnataka.
                             </p>
 
-                            <div class="hero-stats">
+                            <div class="hero-stats" aria-label="Career highlights">
                                 <div class="hero-stat">
                                     <span class="hero-stat-number counter" data-target="35">35+</span>
                                     <span class="hero-stat-label">Years of Service</span>
@@ -93,29 +171,32 @@
                             </div>
 
                             <div class="hero-ctas">
-                                <a href="journey.html" class="btn btn-primary">Explore Journey</a>
+                                <a href="journey.html" class="btn btn-primary">Explore Career Journey</a>
                                 <a href="contact.html" class="btn btn-gold-outline">Get in Touch</a>
                             </div>
                         </div>
 
                         <div class="hero-image">
                             <img src="../assets/images/hero/portrait.png"
-                                alt="Dr. M. R. Ravi, IAS - Professional Portrait" class="hero-portrait" loading="eager">
+                                alt="Dr. M. R. Ravi, IAS — Professional Portrait" class="hero-portrait" loading="eager">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- About Preview Section -->
-            <section class="section">
+            <!-- ── 2. About Preview — gallery image used here ── -->
+            <section class="section section-alt" aria-labelledby="about-preview-heading">
                 <div class="container">
                     <div class="about-preview reveal">
                         <div class="about-preview-image reveal-left">
-                            <img src="../assets/images/hero/portrait.png" alt="Dr. M. R. Ravi at work">
+                            <img src="../assets/images/gallery/gallery-4.JPG"
+                                alt="Dr. M. R. Ravi at a government conference">
                         </div>
                         <div class="about-preview-content reveal-right">
                             <span class="about-preview-label">About Dr. Ravi</span>
-                            <h2 class="about-preview-title">A Life Dedicated to Public Service</h2>
+                            <h2 id="about-preview-heading" class="about-preview-title">
+                                A Life Dedicated to Public Service
+                            </h2>
                             <p class="about-preview-text">
                                 Dr. M. R. Ravi belongs to the Karnataka cadre of the Indian Administrative
                                 Service and has held key positions across multiple departments including
@@ -124,9 +205,9 @@
                                 measurable outcomes that have touched millions of lives.
                             </p>
                             <p class="about-preview-text">
-                                With over three decades of experience, Dr. Ravi has been instrumental in
-                                implementing transformative policies that prioritize sustainable development
-                                and community empowerment.
+                                As an author of eight books, he bridges the worlds of governance and
+                                literature — sharing insights from the field with a wider audience and
+                                enriching public discourse on administration and culture.
                             </p>
                             <a href="about.html" class="btn btn-secondary">Learn More About Dr. Ravi →</a>
                         </div>
@@ -134,8 +215,8 @@
                 </div>
             </section>
 
-            <!-- Stats Counter Section -->
-            <section class="stats-section">
+            <!-- ── 3. Stats Counter Section ── -->
+            <section class="stats-section" aria-label="Key achievements">
                 <div class="container">
                     <div class="stats-grid">
                         <div class="stat-item">
@@ -144,10 +225,10 @@
                         </div>
                         <div class="stat-item">
                             <span class="stat-number counter" data-target="15">15+</span>
-                            <span class="stat-label">Key Positions</span>
+                            <span class="stat-label">Key Positions Held</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number counter" data-target="12">12</span>
+                            <span class="stat-number counter" data-target="20">20+</span>
                             <span class="stat-label">Awards Received</span>
                         </div>
                         <div class="stat-item">
@@ -158,20 +239,19 @@
                 </div>
             </section>
 
-            <!-- Areas of Impact Section -->
-            <section class="section home-highlights">
+            <!-- ── 4. Areas of Impact ── -->
+            <section class="section home-highlights" aria-labelledby="impact-heading">
                 <div class="container">
                     <div class="section-header">
-                        <!-- <span class="about-preview-label">Expertise</span> -->
-                        <!-- <h5 class="about-preview-label">Areas of Impact</h5> -->
-                        <p><span class="about-preview-label">Initiatives</span></p>
-                        <h2>Areas of Impact</h2>
+                        <span class="about-preview-label">Initiatives</span>
+                        <h2 id="impact-heading">Areas of Impact</h2>
                         <p>Key domains where Dr. Ravi has made significant contributions to governance and development
                         </p>
                     </div>
 
                     <div class="highlight-grid">
-                        <div class="feature-card">
+
+                        <a href="impact.html" class="feature-card" aria-label="Rural Development — learn more">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/rural-development.png" alt="Rural Development">
                             </div>
@@ -182,11 +262,11 @@
                                     Spearheaded initiatives in rural infrastructure, livelihood programs,
                                     and community empowerment reaching over 500 villages.
                                 </p>
-                                <!-- <span class="feature-arrow">Explore →</span> -->
+                                <span class="feature-arrow">Explore →</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="feature-card">
+                        <a href="impact.html" class="feature-card" aria-label="Education Reform — learn more">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/education-reform.png" alt="Education Reform">
                             </div>
@@ -197,11 +277,11 @@
                                     Led educational policy reforms focusing on quality improvement,
                                     teacher training, and inclusive education programs.
                                 </p>
-                                <!-- <span class="feature-arrow">Explore →</span> -->
+                                <span class="feature-arrow">Explore →</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="feature-card">
+                        <a href="impact.html" class="feature-card" aria-label="Urban Planning — learn more">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/urban-planning.png" alt="Urban Planning">
                             </div>
@@ -210,13 +290,13 @@
                                 <h3 class="feature-title">Urban Planning</h3>
                                 <p class="feature-description">
                                     Contributed to sustainable urban development through
-                                    smart city initiatives and infrastructure modernization.
+                                    smart city initiatives and infrastructure modernisation.
                                 </p>
-                                <!-- <span class="feature-arrow">Explore →</span> -->
+                                <span class="feature-arrow">Explore →</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="feature-card">
+                        <a href="impact.html" class="feature-card" aria-label="Governance and Policy — learn more">
                             <div class="feature-image">
                                 <img src="../assets/images/impact/governance-policy.png" alt="Governance & Policy">
                             </div>
@@ -227,9 +307,10 @@
                                     Designed and implemented policies focused on transparency,
                                     efficiency, and citizen-centric governance.
                                 </p>
-                                <!-- <span class="feature-arrow">Explore →</span> -->
+                                <span class="feature-arrow">Explore →</span>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
 
                     <div class="text-center mt-2xl">
@@ -238,8 +319,8 @@
                 </div>
             </section>
 
-            <!-- Quote Section -->
-            <section class="quote-section">
+            <!-- ── 5. Pull Quote ── -->
+            <section class="quote-section" aria-label="Quote from Dr. Ravi">
                 <div class="container container-narrow">
                     <p class="quote-text reveal">
                         "True governance is not about wielding power, but about empowering people.
@@ -250,52 +331,93 @@
                 </div>
             </section>
 
-            <!-- Books Preview -->
-            <section class="section">
+            <!-- ── 6. Gallery Glimpse (real photos) ── -->
+            <section class="section section-alt home-gallery-glimpse" aria-labelledby="glimpse-heading">
                 <div class="container">
                     <div class="section-header">
-                        <!-- <span class="about-preview-label">Publications</span> -->
-                        <p><span class="about-preview-label">Publications</span></p>
-                        <h2>Thought Leadership</h2>
+                        <span class="about-preview-label">Photo Gallery</span>
+                        <h2 id="glimpse-heading">Moments in Service</h2>
+                        <p>A glimpse into the field, the community, and the events that define a career</p>
+                    </div>
+
+                    <div class="home-gallery-grid">
+                        <a href="gallery.html" class="home-gallery-item home-gallery-item--wide"
+                            aria-label="View full gallery">
+                            <img src="../assets/images/gallery/gallery-1.JPG"
+                                alt="Dr. Ravi at a state-level administrative meeting" loading="lazy">
+                            <span class="home-gallery-overlay">Official Events</span>
+                        </a>
+                        <a href="gallery.html" class="home-gallery-item" aria-label="View full gallery">
+                            <img src="../assets/images/gallery/gallery-2.JPG" alt="Rural development field visit"
+                                loading="lazy">
+                            <span class="home-gallery-overlay">Field Visits</span>
+                        </a>
+                        <a href="gallery.html" class="home-gallery-item" aria-label="View full gallery">
+                            <img src="../assets/images/gallery/gallery-3.JPG" alt="Community outreach program"
+                                loading="lazy">
+                            <span class="home-gallery-overlay">Community</span>
+                        </a>
+                        <a href="gallery.html" class="home-gallery-item" aria-label="View full gallery">
+                            <img src="../assets/images/gallery/SAI_9212.JPG" alt="Award ceremony" loading="lazy">
+                            <span class="home-gallery-overlay">Awards</span>
+                        </a>
+                    </div>
+
+                    <div class="text-center mt-xl">
+                        <a href="gallery.html" class="btn btn-secondary">View All Photos →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── 7. Books Preview ── -->
+            <section class="section" aria-labelledby="books-heading">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="about-preview-label">Publications</span>
+                        <h2 id="books-heading">Thought Leadership</h2>
                         <p>Insights from decades of governance experience captured in print</p>
                     </div>
 
-                    <div class="grid grid-cols-4">
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-1.png" alt="Governance & Development Book Cover"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">Governance & Development</h4>
-                                <p class="book-meta">English • 2020</p>
+                    <div class="books-grid">
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-1.png" alt="Namma Uddara Nammindale"
+                                    class="book-cover" loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Namma Uddara Nammindale</h3>
+                            </div>
+                        </article>
 
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-2.png" alt="Rural Transformation Book Cover"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">Rural Transformation</h4>
-                                <p class="book-meta">English • 2018</p>
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-2.png" alt="Premalaali" class="book-cover"
+                                    loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Premalaali</h3>
+                            </div>
+                        </article>
 
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-3.png" alt="ಆಡಳಿತದ ದಾರಿ Book Cover" class="book-cover"
-                                loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">ಆಡಳಿತದ ದಾರಿ</h4>
-                                <p class="book-meta">Kannada • 2019</p>
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-3.png" alt="Badukonu Bara" class="book-cover"
+                                    loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Badukonu Bara</h3>
+                            </div>
+                        </article>
 
-                        <div class="card book-card">
-                            <img src="../assets/images/books/book-4.png" alt="Public Administration Book Cover"
-                                class="book-cover" loading="lazy">
-                            <div class="book-info">
-                                <h4 class="book-title">Public Administration</h4>
-                                <p class="book-meta">English • 2017</p>
+                        <article class="book-card">
+                            <div class="book-cover-wrap">
+                                <img src="../assets/images/books/book-4.png" alt="Ambedkar Illada Bharata"
+                                    class="book-cover" loading="lazy">
                             </div>
-                        </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Ambedkar Illada Bharata</h3>
+                            </div>
+                        </article>
                     </div>
 
                     <div class="text-center mt-xl">
@@ -304,8 +426,8 @@
                 </div>
             </section>
 
-            <!-- CTA Banner -->
-            <section class="cta-banner">
+            <!-- ── 8. CTA Banner ── -->
+            <section class="cta-banner" aria-label="Contact call to action">
                 <div class="container">
                     <h2 class="cta-banner-title reveal">Connect with Dr. Ravi</h2>
                     <p class="cta-banner-text reveal">
@@ -313,7 +435,8 @@
                     </p>
                     <div class="reveal">
                         <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-                        <a href="gallery.html" class="btn btn-gold-outline">View Gallery</a>
+                        <a href="gallery.html" class="btn btn-gold-outline" style="margin-left: var(--space-md);">View
+                            Gallery</a>
                     </div>
                 </div>
             </section>
@@ -363,14 +486,13 @@
 
                 <div class="footer-bottom">
                     <p class="footer-copyright">
-                        © 2026 Dr. M. R. Ravi, IAS. All rights reserved.
+                        &copy; 2026 Dr. M. R. Ravi, IAS. All rights reserved.
                     </p>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
 </body>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Stylesheets -->
@@ -56,7 +56,7 @@
         <!-- Main Content -->
         <main id="main-content" class="main-content" tabindex="-1">
 
-            <!-- Page Hero - Dark -->
+            <!-- Page Hero -->
             <section class="page-hero page-hero-dark">
                 <div class="container">
                     <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -69,6 +69,26 @@
                 </div>
             </section>
 
+            <!-- Stat Strip -->
+            <section class="section" style="padding-bottom: 0;">
+                <div class="container">
+                    <div class="about-stats-strip">
+                        <div class="about-stat">
+                            <span class="about-stat-number">35+</span>
+                            <span class="about-stat-label">Years of Service</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">8</span>
+                            <span class="about-stat-label">Books Authored</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">20+</span>
+                            <span class="about-stat-label">Awards & Honours</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- About Content -->
             <section class="section">
                 <div class="container">
@@ -76,8 +96,10 @@
 
                         <!-- Sidebar -->
                         <aside class="about-sidebar">
-                            <img src="../assets/images/hero/portrait.png" alt="Dr. M. R. Ravi, IAS" class="about-image"
-                                loading="lazy">
+                            <div class="about-image-wrap">
+                                <img src="../assets/images/hero/portrait.png" alt="Dr. M. R. Ravi, IAS"
+                                    class="about-image" loading="lazy">
+                            </div>
 
                             <div class="about-quick-facts">
                                 <h4>Quick Facts</h4>
@@ -106,11 +128,18 @@
                                     <div class="quick-fact-label">Education</div>
                                     <div class="quick-fact-value">PhD in Public Administration</div>
                                 </div>
+
+                                <div class="quick-fact">
+                                    <div class="quick-fact-label">Language</div>
+                                    <div class="quick-fact-value">Kannada, English, Hindi</div>
+                                </div>
                             </div>
                         </aside>
 
                         <!-- Main Content -->
                         <div class="about-main">
+
+                            <span class="about-section-label">Professional Background</span>
                             <h2>Professional Summary</h2>
                             <p>
                                 Dr. M. R. Ravi is a senior officer of the Indian Administrative Service
@@ -131,6 +160,7 @@
                                 academic and practitioner communities alike.
                             </p>
 
+                            <span class="about-section-label">Core Beliefs</span>
                             <h2>Vision & Philosophy</h2>
                             <p>
                                 Dr. Ravi believes in governance that is responsive, transparent, and
@@ -138,28 +168,34 @@
                                 administration must be grounded in a deep understanding of the communities
                                 it serves.
                             </p>
+
                             <blockquote class="about-quote">
-                                "Good governance is not about grand schemes alone—it is about the cumulative
+                                "Good governance is not about grand schemes alone — it is about the cumulative
                                 impact of countless small decisions made in the interest of the people.
                                 Every file is a person's hope, every policy a promise to the public."
                             </blockquote>
+
                             <p>
                                 This people-first orientation has guided his approach across rural development
-                                programs, educational reforms, and urban planning initiatives.
+                                programs, educational reforms, and urban planning initiatives throughout his career.
                             </p>
 
+                            <span class="about-section-label">Domains</span>
                             <h2>Areas of Expertise</h2>
-                            <ul class="expertise-list">
-                                <li>Rural Development &amp; Panchayat Raj</li>
-                                <li>District Administration</li>
-                                <li>Education Policy &amp; Reform</li>
-                                <li>Urban Planning &amp; Smart City Initiatives</li>
-                                <li>Revenue Administration</li>
-                                <li>E-Governance &amp; Administrative Reform</li>
-                                <li>Social Welfare Programs</li>
-                                <li>Disaster Management</li>
-                            </ul>
+                            <div class="expertise-grid">
+                                <span class="expertise-pill">Rural Development & Panchayat Raj</span>
+                                <span class="expertise-pill">District Administration</span>
+                                <span class="expertise-pill">Education Policy & Reform</span>
+                                <span class="expertise-pill">Urban Planning & Smart City</span>
+                                <span class="expertise-pill">Revenue Administration</span>
+                                <span class="expertise-pill">E-Governance & Administrative Reform</span>
+                                <span class="expertise-pill">Social Welfare Programs</span>
+                                <span class="expertise-pill">Disaster Management</span>
+                                <span class="expertise-pill">Public Health Administration</span>
+                                <span class="expertise-pill">Infrastructure Development</span>
+                            </div>
 
+                            <span class="about-section-label">Academic Credentials</span>
                             <h2>Education</h2>
                             <p>
                                 Dr. Ravi holds a doctorate in Public Administration, complementing his
@@ -167,12 +203,17 @@
                                 academic pursuits have enriched his practical experience, enabling him
                                 to contribute both as a practitioner and a thought leader in the field.
                             </p>
+                            <p>
+                                His doctoral research focused on the effectiveness of rural development
+                                programs in Karnataka, bridging empirical study with ground-level administrative
+                                experience — a combination that continues to inform his writing and public service.
+                            </p>
 
-                            <div class="mt-xl">
+                            <div class="about-cta-row">
                                 <a href="journey.html" class="btn btn-primary">View Career Journey</a>
-                                <a href="contact.html" class="btn btn-secondary"
-                                    style="margin-left: var(--space-md);">Contact</a>
+                                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
                             </div>
+
                         </div>
 
                     </div>
@@ -223,7 +264,7 @@
 
                 <div class="footer-bottom">
                     <p class="footer-copyright">
-                        © 2026 Dr. M. R. Ravi, IAS. All rights reserved.
+                        &copy; 2026 Dr. M. R. Ravi, IAS. All rights reserved.
                     </p>
                 </div>
             </div>

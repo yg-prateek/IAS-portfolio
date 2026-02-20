@@ -118,9 +118,9 @@ button {
     --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     /* Typography - Font Families */
-    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-kannada: 'Noto Sans Kannada', sans-serif;
+    --font-heading: 'Averia Serif Libre', Georgia, 'Times New Roman', serif;
+    --font-body: 'Geist Mono', 'Courier New', monospace;
+    --font-kannada: 'Noto Sans Kannada', 'Geist Mono', monospace;
 
     /* Typography - Font Sizes */
     --font-size-h1: 3.5rem;
@@ -218,15 +218,21 @@ button {
 
 body {
     font-family: var(--font-body);
-    font-size: var(--font-size-body);
+    font-size: 1.0625rem;
+    /* 17px — mono reads better slightly larger */
     font-weight: var(--font-weight-regular);
+    line-height: 1.85;
+    /* Geist Mono needs generous line-height */
     color: var(--color-text-primary);
     background-color: var(--color-background);
 }
 
 /* Kannada language support */
 html[lang="kn"] body {
-    font-family: var(--font-kannada), var(--font-body);
+    font-family: var(--font-kannada);
+    font-size: 1.0625rem;
+    line-height: 1.9;
+    /* Noto Sans Kannada benefits from slightly more space */
 }
 
 h1,
@@ -239,6 +245,8 @@ h6 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
     color: var(--color-text-primary);
+    /* Averia Serif Libre has generous proportions — light tracking looks elegant */
+    letter-spacing: 0.01em;
 }
 
 h1 {
@@ -268,6 +276,43 @@ p {
 
 p:last-child {
     margin-bottom: 0;
+}
+
+/* ── Global UI Utilities ── */
+
+/* Pull-quotes — Averia Serif Libre italic */
+.quote-text {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.015em;
+    line-height: var(--line-height-relaxed);
+}
+
+/* Stat/counter numbers — Geist Mono for crisp numerals */
+.stat-number,
+.hero-stat-number {
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Hero tagline — lighter weight for elegant contrast with headings */
+.hero-tagline {
+    font-family: var(--font-body);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.85;
+}
+
+/* Section/eyebrow labels — Geist Mono uppercase, precision feel */
+.about-preview-label,
+.hero-subtitle,
+.section-label {
+    font-family: var(--font-body);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 /* Links */
